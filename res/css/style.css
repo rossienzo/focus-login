@@ -1,0 +1,203 @@
+:root
+{
+    /* Textos */
+    --heading-text-color: #FFFFFF;
+    --link-color: #704275;
+    --text-color: #000000;
+
+    /* Inputs */
+    --input-padding: 8px;
+    --input-margin: 12px;
+    --input-text: #686363;
+    --input-background: #cccfd3;
+    --input-border: #909296;
+
+    /* Button */
+    --button-background: var(--link-color);
+    --button-border: #513455;
+    --button-hover: #5e3763;
+
+    /* GitHub */
+    --button-github-text: #1f1e1e;
+    --button-github-background: #525151;
+    --button-github-background-hover: #464444;
+}
+
+/* Reset */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #2c5364a8, #203A43a8, #0F2027a8),
+    url("../img/background.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+/* list style remove */
+ul li { list-style: none; }
+
+a 
+{ 
+    text-decoration: none;
+    font-size: 0.9rem; 
+    font-weight: 500;
+    color: var(--link-color);
+}
+
+a:hover { opacity: 0.8; }
+    
+h1
+{
+    font-size: 3rem;
+    color: var(--heading-text-color);
+}
+
+main
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section { padding: 10px; }
+
+#Heading 
+{ 
+    max-width: 360px;
+    letter-spacing: 0.05rem; 
+}
+
+/*** <form> ***/
+
+#FormControl
+{
+    background-color: var(--heading-text-color);
+    padding: 30px 55px;
+    width: 100%;
+    max-width: 390px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+form > * 
+{
+    margin-top: var(--input-margin);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+form input
+{
+    padding: var(--input-padding);
+    color: var(--input-text);
+    background-color: var(--input-background);
+    border: 1px solid var(--input-border);
+    outline: none;
+}
+
+form input:focus { box-shadow: 0 0 5px #bbbbbb; }
+
+
+input::placeholder { color: var(--input-text); }
+
+/* erro/sucesso na entrada dos inputs */
+.success { border: 2px solid #1fa848; }
+.warning { border: 2px solid #d62a2a; }
+
+
+/***** <center> ***/
+.center
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-top: - var(--input-margin); /* Remove a margem do topo do elemento com a classe*/
+}
+
+.center > * { margin-top: var(--input-margin); }
+
+button
+{
+    padding: var(--input-padding);
+    font-weight: 600;
+    text-transform: uppercase;
+    background: var(--button-background);
+    color: #FFFFFF;
+    border: 1px solid var(--button-border);
+
+    transition: 0.25s;
+    cursor: pointer;
+    
+}
+
+button:hover 
+{ 
+    background-color: var(--button-hover);
+    /* Shadow */
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+p { color: var( --text-color);}
+
+.icon 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: var(--input-margin);
+
+    color: var(--button-github-text);
+    background: var(--button-github-background);
+}
+
+.icon img 
+{ 
+    width: 20px;
+    margin-right: 5px;
+}
+
+.icon:hover { background: var(--button-github-background-hover); }
+
+/***** <center/> ***/
+
+/*** <form/> ***/
+
+.shadow 
+{
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+
+/***
+ ** Mobile
+ */
+
+@media only screen and (max-width: 740px) 
+{
+    main { flex-direction: column; }
+
+    h1 { font-size: 2.2rem; }
+    #Heading { text-align: center;}
+}
