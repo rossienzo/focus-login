@@ -9,30 +9,6 @@ const btnSubmit = document.getElementById("Submit") || null;
  * e aplica as classes adequadas.
  */
 
-/*
-btnSubmit.addEventListener("click",e => {
-    const inputs = formControl.getElementsByTagName("input");
-
-    for (x = 0; x < inputs.length; x++)
-    {
-        if(checkData(inputs.item(x)))
-        {
-            if(inputs.item(x).classList.contains("warning"))
-                inputs.item(x).classList.remove("warning");
-            
-            inputs.item(x).classList.add("success");
-        }
-        else
-        {
-            if(inputs.item(x).classList.contains("success"))
-                inputs.item(x).classList.remove("success");
-
-            inputs.item(x).classList.add("warning");
-        }
-    }
-});
-*/
-
 btnSubmit.addEventListener("click",e => {
     const inputs = formControl.getElementsByTagName("input");
 
